@@ -15,6 +15,14 @@ level of `group`. The first column of the output data frame contains the
 levels of `group`, and the rest of the columns contain the number of
 missing values for all columns in `data` except `group`.
 
+## Repository files
+
+The file R/countMissing.R contains the source code.
+
+The file test/testthat/test-countMissing.R contains the unit test codes.
+
+The file man/count_all_missing_by_group.Rd contains the roxygen2 tags.
+
 ## Installation
 
 You can install the development version of countMissing from
