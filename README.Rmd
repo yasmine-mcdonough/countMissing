@@ -1,0 +1,43 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# countMissing
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of countMissing is to count missing values for all columns by group.
+
+Given a data frame `data` and a column `group`, `count_all_missing_by_group()` creates a new data frame with one row per level of `group`. The first column of the output data frame contains the levels of `group`, and the rest of the columns contain the number of missing values for all columns in `data` except `group`.
+
+## Installation
+
+You can install the development version of countMissing from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("yasmine-mcdonough/countMissing")
+```
+
+## Example
+
+This example computes the number of missing values in the `airquality` dataset grouped by the `cyl` column.
+
+```{r example}
+library(countMissing)
+count_all_missing_by_group(airquality, Month)
+```
+
+
